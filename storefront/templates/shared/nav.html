@@ -1,0 +1,12 @@
+           <ul>
+            {% for item in store.menu_items %}
+              <li{% if category == item.url %} class='active'{% endif %}><a href="/{{item.url}}" class="{{item.class}}" title="{{item.name}}">{{item.name}}</a></li>
+            {% endfor %} 
+
+
+            <li class="spacer"><svg width="2" height="24" viewBox="0 0 2 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" width="1" height="24" rx="0.5" fill="#373F41"/>
+</svg>
+</li>
+            <li><a href="/sale" class="special-pricing" title="Special Pricing">Special Pricing</a></li> 
+           </ul>

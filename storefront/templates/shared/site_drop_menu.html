@@ -1,0 +1,14 @@
+              <select class="mselect" id="mselect" onchange="goToHV(this)">
+              {% if store.development == True %}
+               <option value="?menuType=rec">STAGING- REC</option>
+               <option value="?menuType=med">STAGING - MED</option>
+              {% endif %}
+               <option value="https://eastboston.happyvalley.org?menuType=rec">EAST BOSTON - REC</option>
+               <option value="https://eastboston.happyvalley.org?menuType=med">EAST BOSTON - MED</option>
+<option value="https://shop.zyprun.com/brand/happyvalley?utm_source=happyvalley.org&utm_medium=referral&utm_campaign=eComm">EAST BOSTON - DELIVERY</option>
+               <option value="https://gloucester.happyvalley.org?menuType=rec">GLOUCESTER - REC</option>
+               <option value="https://gloucester.happyvalley.org?menuType=med">GLOUCESTER - MED</option>
+             </select>
+             <script>
+              document.getElementById("mselect").value = "{{store.subdomain}}";
+             </script>

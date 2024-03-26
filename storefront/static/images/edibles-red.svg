@@ -1,0 +1,12 @@
+<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.466 4.78702C17.629 4.88483 17.7638 5.0232 17.8574 5.18864C17.951 5.35408 18.0001 5.54095 18 5.73102V10.37L12.5 13.908L7 10.37V5.73102C6.99986 5.54095 7.04898 5.35408 7.14257 5.18864C7.23616 5.0232 7.37102 4.88483 7.534 4.78702L11.934 2.14702C12.105 2.04443 12.3006 1.99023 12.5 1.99023C12.6994 1.99023 12.895 2.04443 13.066 2.14702L17.466 4.78702Z" stroke="#D12C35" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.5 8.40796V13.908" stroke="#D12C35" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 17.208L12.5 13.908M12.5 13.908L18 10.37L23 13.583C23.1539 13.6832 23.2803 13.8203 23.3677 13.9819C23.455 14.1435 23.5005 14.3243 23.5 14.508V18.57C23.5005 18.7537 23.455 18.9345 23.3677 19.0961C23.2803 19.2577 23.1539 19.3948 23 19.495L18.6 22.325C18.4225 22.4391 18.216 22.4998 18.005 22.4998C17.794 22.4998 17.5875 22.4391 17.41 22.325L12.5 19.17V13.908Z" stroke="#D12C35" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 17.208V22.5" stroke="#D12C35" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.5 13.908V19.17L7.6 22.325C7.42254 22.4391 7.216 22.4998 7.005 22.4998C6.79401 22.4998 6.58747 22.4391 6.41 22.325L2.01 19.495C1.85421 19.396 1.72584 19.2594 1.63671 19.0977C1.54759 18.9361 1.50057 18.7546 1.5 18.57V14.508C1.4995 14.3243 1.54499 14.1435 1.63232 13.9819C1.71966 13.8203 1.84606 13.6832 2 13.583L7 10.37L12.5 13.908ZM12.5 13.908L7 17.208" stroke="#D12C35" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.0001 17.2081L1.6311 13.9871" stroke="#D12C35" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 17.208V22.5" stroke="#D12C35" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.5001 8.40802L7.14111 5.19202" stroke="#D12C35" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.859 5.19202L12.5 8.40802" stroke="#D12C35" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23.369 13.9871L18 17.2081" stroke="#D12C35" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" property="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="title" property="og:title" content="{{ store.meta.name }}">
+    <meta name="description" property="og:description" content="{{ store.meta.meta_description }}">
+    <meta name="image" property="og:image" content="{{ store.meta.image }}">
+    <link rel="canonical" href="{{ store.location.subdomain }}.happpyvalley.org" />
+    <link rel="stylesheet" href="/static/css/vendor/materialize.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/static/css/vendor/tiny-slider.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script>
+    <link href="{% static 'css/store.css' %}" rel="stylesheet" />
+    <script src="/static/js/jquery.magnify.js"></script>
+    <script src="/static/js/coin-slider.js"></script>
+    <link rel="stylesheet" href="/static/js/coin-slider-styles.css" type="text/css" />
+    {% if store.development != True %}
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=HayNuxRtwm0u1LjgAR4lXw&gtm_preview=env-2&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PTXL47C');</script>
+    {% endif %}
+<!--     <% if @product %>
+      <%= render partial: 'struct_data' %>
+    <% end %> -->
+    {% csrf_token %}
+  </head>
+
+  <body>
+<div class="main-container">
+    <div class="nav-container">
+      <div class="mobile-nav{{ store.store_open_txt }}">
+        <div class="mcontrols">
+                <div class="mobile-search-panel"><div class="search-fieldsm"><input type="text" id="searchm" placeholder="Search Happy Valley" /></div></div>
+          <div class="mstore-list">
+          <img src="/static/images/home.svg" alt="Happy Valley"/>
+              
+              {% include "shared/site_drop_menu.html" %}
+        
+             {% if store.store_open != True %}
+             <div class="closed"><a href="/info"><img src="/static/images/closed-mobile.svg"/></a></div>
+             {% endif %}
+            
+          </div>
+        </div>
+            <div class="msearch">
+             <a href="javascript:void(0)" class="mag search-button"><img src="/static/images/mag.svg"/></a>
+             <div  aria-label="{{store.cart_size}} item(s) in your shopping cart"
+          data-target="cart-slide-out"
+          data-button="cart"
+          class="cart-btn sidenav-trigger {% if store.cart_size > 0 %}has-items{% else %}{% endif %}"><num class="cart-count-m cart-count"></num></div>
+          </div>
+      </div>
+      
+      <div class="navigation">
+        <div class="nav-left">
+          <a href="/" title="Happy Valley Home"><img src="/static/images/logo.svg"/></a>
+        </div>
+        <div class="nav-right <%= 'close-wd' unless @store_open %>">
+          <div class="hdr-controls">
+            <div class="search-fields"><input type="text" id="search" placeholder="Search Happy Valley" /></div>
+             <a href="#" class="search-button mag"><img src="/static/images/mag.svg"/></a>
+             <div class="store-list">
+              <img src="/static/images/home.svg"/>
+                {% include "shared/site_drop_menu.html" %}
+            </div>
+             {% if store.store_open != True %}
+             <div class="closed"><a href="/info"><img src="/static/images/closed.svg"/></a></div>
+              {% endif %}
+          </div>
+
+          <div 
+
+          aria-label="{{store.cart_size}} item(s) in your shopping cart"
+          data-target="cart-slide-out"
+          data-button="cart"
+          class="cart-btn sidenav-trigger {% if store.cart_size > 0 %}has-items{% else %}{% endif %}"
+          ><num class="cart-count-d cart-count"></num></div>
+         </div>
+         <div class="colapse-menu">
+            <img src="/static/images/burger.svg" class="sidenav-trigger" data-target="slide-out" />
+          </div>
+        </div>
+        <div class="nav2">
+          {% include "shared/nav.html" %}
+        </div>
+      </div>
+        <div class="content">
+                    <div id="cart-panel">{% include "shared/cart.html" %}</div>
+      
+          {% include "shared/modals.html" %}
+          {% include "shared/mobile_menu.html" %}

@@ -1,0 +1,63 @@
+
+<!-- Mobile Menu Container -->
+<div role="presentation" class="mobile-menu-container mobile-sidenav sidenav" id="slide-out">
+  <div
+    class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiPaper-elevation16"
+    noderef="[object Object]"
+    tabindex="-1"
+    style="transform: none; transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms"
+  >
+    <div class="menu-drawer__Container-c0s90h-2 oFShG" style="position: relative">
+      <div class="mobile-menu-top menu-drawer__StoreStatusContainer-c0s90h-0 gBDDlm">
+        <button class="btn btn-store-info button__StyledButton-nsdkri-1 ddsRtF info-button__InfoButton-q15i12-0 kCXPlK" role="button">
+        </button>
+        <button class="btn btn-mobile-close sidenav-close" role="button"></button>
+      </div>
+      <div class="mobile-tabs-container tabs-container">
+        <div id="categories" class="col s12">
+
+          <div class="nav2 categories-list-container categories-list__Container-sc-1nwx1nx-0 llcdNf">
+
+           <ul>
+            <li class="mobile-c-title">Categories</li>
+            {% for item in store.menu_items %}
+              <li{% if category == item.url %} class='active'{% endif %}><a href="/{{item.url}}" class="{{item.class}}" title="{{item.name}}">{{item.name}}</a></li>
+            {% endfor %} 
+ 
+              <li class="sale-m-item"><a href="/sale" class="special-pricing" title="Special Pricing">Special Pricing</a></li> 
+        
+           </ul>
+          </div>
+        </div>
+<!--         <div id="brands" class="col s12">
+          <div id="brands-search" class="tab-content-container">
+            <div class="brands-search">
+              <div class="search-container">
+                <div class="search-input">
+                  <div class="search-icon">
+                    <svg width="19" height="19" viewBox="0 0 18 19" fill="none" id="search-icon" alt="" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.04981 2.1699C9.82994 2.25329 12.0633 4.48763 12.1477 7.26775C12.1477 9.96355 9.96354 12.1477 7.26775 12.1477C4.48762 12.0643 2.25328 9.82995 2.1699 7.04982C2.1699 4.35497 4.35496 2.1699 7.04981 2.1699ZM13.2658 10.9253C13.9367 9.82331 14.291 8.55832 14.2891 7.26775C14.2039 3.30034 11.0163 0.100441 7.04982 0C3.15631 0 0 3.15631 0 7.04982C0.08528 11.0277 3.28991 14.2323 7.26775 14.3176C8.5119 14.3214 9.73519 13.9954 10.8116 13.37L15.1609 17.6814C15.5807 18.1049 16.2648 18.1087 16.6884 17.689L17.7667 16.6107C18.1741 16.1843 18.0036 15.6536 17.5961 15.2272L13.2658 10.9253Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input type="search" class="search" placeholder="Search Brands..." />
+                </div>
+              </div>
+            </div>
+            <div class="brands-list-container">
+              <ul class="list mobile-brands-list categories-list categories-list__CategoryList-sc-1nwx1nx-1 hoERUn">
+                <% @brands.each do |b| %>
+                <li class="brand-list-item"><a class="brand-name" href="/brands/<%= b['id'] %>"><%= b['name'].humanize %></a></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <div tabindex="0" data-test="sentinelEnd"></div>
+</div>

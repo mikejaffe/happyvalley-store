@@ -1,0 +1,32 @@
+    <%
+    prod_url = @product.category.downcase
+    if @product.subcategory.present? && @product.subcategory != "DEFAULT"
+      prod_url = prod_url + "/" + @product.subcategory.downcase
+    end
+    prod_url = prod_url + "/" + @product.slug
+  %>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "<%= @product.name %>",
+      "image": "<%= @product.best_image %>",
+      "description": "<%= @product.description %>",
+      "sku": "<%= @product.id %>",
+      "product_slug": "<%= @product.slug %>",
+      "mpn": "<%= @product.pos_id %>",
+      "brand": {
+        "@type": "Brand",
+        "name": "Happy Valley"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://<%= request.subdomain  %>.happyvalley.org/<%= prod_url %>",
+        "priceCurrency": "USD",
+        "price": "<%= actual_price_num(@menu_type, @product.variants.first ) %>",
+        "priceValidUntil": "<%= Date.today + 30.days %>",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
