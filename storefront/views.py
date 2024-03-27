@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from urllib.parse import urlparse
 from storefront.store import Store
+from storefront.dutchie import Dutchie
 from django.http import JsonResponse
 
 # Create your views here.
